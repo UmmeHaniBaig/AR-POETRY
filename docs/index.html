@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur">
 <head>
   <meta charset="UTF-8">
-  <title>AR Minimal Test</title>
+  <title>AR Urdu Poetry</title>
   <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
 </head>
 <body style="margin:0; overflow:hidden;">
 
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: true;'>
-    <!-- Single Hiro marker -->
+
+    <a-assets>
+      <!-- Urdu poetry image -->
+      <img id="poetry" src="https://raw.githubusercontent.com/UmmeHaniBaig/AR-POETRY/main/docs/bgfinal.png">
+    </a-assets>
+
     <a-marker preset="hiro">
+      <!-- Yellow cube -->
       <a-box position="0 0.5 0" material="color: yellow"></a-box>
+
+      <!-- Urdu poetry plane above the cube -->
+      <a-plane 
+        src="#poetry"
+        position="0 1.5 0"
+        rotation="-90 0 0"
+        width="3"
+        height="1.5">
+      </a-plane>
     </a-marker>
 
     <a-entity camera></a-entity>
+
   </a-scene>
 
 </body>
