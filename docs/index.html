@@ -8,15 +8,16 @@
   <style>
     /* Simple overlay text */
     #instruction {
-      position: fixed;
-      top: 10px;
-      width: 100%;
-      text-align: center;
+      position: fixed;          /* stays in place even if screen resizes */
+      top: 10px;                /* distance from top */
+      left: 50%;                /* center horizontally */
+      transform: translateX(-50%); /* adjust exact center */
       font-size: 18px;
-      color: red;
       font-weight: bold;
-      text-shadow: 1px 1px 2px black;
-      z-index: 10;
+      color: white;
+      text-shadow: 1px 1px 3px black; /* visible over camera */
+      z-index: 9999;            /* on top of AR scene */
+      text-align: center;
     }
   </style>
 </head>
