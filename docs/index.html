@@ -5,8 +5,24 @@
   <title>AR Urdu Poetry</title>
   <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+  <style>
+    /* Simple overlay text */
+    #instruction {
+      position: absolute;
+      top: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      color: white;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px black;
+      z-index: 10;
+    }
+  </style>
 </head>
 <body style="margin:0; overflow:hidden;">
+  <!-- Simple instruction for non-tech users -->
+  <div id="instruction">NOW SCAN CENTER HIRO LOGO</div>
 
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: true;'>
 
