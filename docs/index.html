@@ -8,12 +8,12 @@
   <style>
     /* Simple overlay text */
     #instruction {
-      position: absolute;
+      position: fixed;
       top: 10px;
       width: 100%;
       text-align: center;
       font-size: 18px;
-      color: white;
+      color: red;
       font-weight: bold;
       text-shadow: 1px 1px 2px black;
       z-index: 10;
@@ -22,7 +22,7 @@
 </head>
 <body style="margin:0; overflow:hidden;">
   <!-- Simple instruction for non-tech users -->
-  <div id="instruction">NOW SCAN CENTER HIRO LOGO</div>
+  <div id="instruction">NOW SCAN CENTER HIRO LOGO FROM QR CODE</div>
 
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: true;'>
 
